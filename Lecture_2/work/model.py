@@ -20,26 +20,43 @@ class AlexNet(nn.Module):
 		self.output = nn.Linear(4096, num_classes)
 
 	def forward(self, x):
+		# First Convolutional Layer
 		y = self.conv1(x)
 		y = self.relu(y)
 		y = self.maxpool(y)
+
+		# Second Convolutional Layer
 		y = self.conv2(y)
 		y = self.relu(y)
 		y = self.maxpool(y)
+
+		# Third Convolutional Layer
 		y = self.conv3(y)
 		y = self.relu(y)
+
+		# Fourth Convolutional Layer
 		y = self.conv4(y)
 		y = self.relu(y)
+
+		# Fifth Convolutional Layer
 		y = self.conv5(y)
 		y = self.relu(y)
 		y = self.maxpool(y)
 		y = self.avgpool(y)
+
+		# Flattening 
 		y = y.view(y.size(0), 256*6*6)
+
+		# First Feed Forward Layer
 		y = self.dropout(y)
 		y = self.ff1(y)
 		y = self.relu(y)
+
+		# Second Feed Forward Layer
 		y = self.dropout(y)
 		y = self.ff2(y)
 		y = self.relu(y)
+
+		# Output Layer
 		y = self.output(y)
 		return y
