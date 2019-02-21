@@ -1,1 +1,2 @@
-https://drive.google.com/file/d/1vka0bnT5LhsxIn6TowGBNkIdjhiP_wzC/view?usp=sharing
+flowers: https://drive.google.com/file/d/1vka0bnT5LhsxIn6TowGBNkIdjhiP_wzC/view?usp=sharing
+MNIST: https://drive.google.com/file/d/1wDNvvwcOuIToLNBZWoZ-c9rUsbp_G5FL/view?usp=sharing
